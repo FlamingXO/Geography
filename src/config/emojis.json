@@ -1,0 +1,21 @@
+{
+    "online": ":online:865612418251620382",
+    "offline": ":offline:865612417751580725",
+    "idle": ":idle:865612417857224764",
+    "dnd": ":dnd:865612417475411978",
+    "flags": {
+        "brazil": ":flag_br:",
+        "europe": ":flag_eu:",
+        "hongkong": ":flag_hk:",
+        "india": ":flag_in:",
+        "japan": ":flag_jp:",
+        "russia": ":flag_ru:",
+        "singapore": ":flag_sg:",
+        "southafrica": ":flag_za:",
+        "sydney": ":flag_au:",
+        "uscentral": ":flag_us:",
+        "useast": ":flag_us:",
+        "ussouth": ":flag_us:",
+        "uswest": ":flag_us:"
+    }
+}
