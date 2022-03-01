@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/FlamingXO/Geography/issues"
   },
-  "homepage": "https://github.com/FlamingXO/Geography#readme"
+  "homepage": "https://github.com/FlamingXO/Geography#readme",
+  "dependencies": {
+    "ascii-table": "^0.0.9",
+    "discord.js": "^13.6.0"
+  }
 }
