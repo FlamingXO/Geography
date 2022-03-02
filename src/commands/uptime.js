@@ -1,3 +1,6 @@
+const Discord = require("discord.js");
+const colors = require("../config/colors.json");
+
 const {
   SlashCommandBuilder
 } = require('@discordjs/builders');
