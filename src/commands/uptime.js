@@ -4,7 +4,6 @@ const colors = require("../config/colors.json");
 const {
   SlashCommandBuilder
 } = require('@discordjs/builders');
-const colors = require("../config/colors.json");
 
 module.exports = {
   data: new SlashCommandBuilder()
@@ -27,7 +26,7 @@ module.exports = {
         `${days} days ${hours} hours ${minutes} minutes ${seconds} seconds`
       );
 
-    interaction.channel.send({
+    interaction.reply({
       embeds: [onUptime]
     });
   },
