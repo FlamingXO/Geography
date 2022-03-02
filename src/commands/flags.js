@@ -1,5 +1,6 @@
 const Discord = require("discord.js");
 const colors = require("../config/colors.json");
+const emojis = require("../config/emojis.json");
 
 const {
   SlashCommandBuilder
@@ -14,11 +15,11 @@ module.exports = {
     let onIntro = new Discord.MessageEmbed()
       .setColor(colors.blank)
       .setTitle("Flags of the World")
-      .addField("Easy Difficulty", "10")
-      .addField("Medium Difficulty", "25")
-      .addField("Hard Difficulty", "50")
-      .addField("Expert Difficulty", "100")
-      .addField("Mr. Worldwide", "196")
+      .addField("Easy Difficulty", `${emojis.easy} 10`)
+      .addField("Medium Difficulty", `${emojis.medium} 25`)
+      .addField("Hard Difficulty", `${emojis.hard} 50`)
+      .addField("Expert Difficulty", `${emojis.expert} 100`)
+      .addField("Mr. Worldwide", `${emojis.worldwide} 196`)
       .setFooter({
         text: "If you encounter any issues, message Flaming#3275"
       });
@@ -31,7 +32,7 @@ module.exports = {
         .setStyle('PRIMARY'),
       )
 
-    await msg.channel.send({
+    await interaction.reply({
       embeds: [onIntro]
     });
   },
