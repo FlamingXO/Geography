@@ -11,8 +11,15 @@ module.exports = {
 		.setDescription('Get the avatar URL of the selected user, or your own avatar.')
 		.addUserOption(option => option.setName('target').setDescription('The user\'s avatar to show')),
 	async execute(interaction) {
-		const user = interaction.options.getUser('target');
-		if (user) return interaction.reply(`${user.username}'s avatar: ${user.displayAvatarURL({ dynamic: true })}`);
-		return interaction.reply(`Your avatar: ${interaction.user.displayAvatarURL({ dynamic: true })}`);
+
+		let user = interaction.options.getUser('target');
+		if (!user) user = interaction.user;
+
+		let onAvatar = new Discord.MessageEmbed()
+			.setColor(colors.blank)
+			.setTitle(`${user.username}'s Avatar`)
+			.setImage(user.displayAvatarURL({dynamic: true, size: 512, format: "png"}))
+		return interaction.reply({embeds: [onAvatar]});
+
 	},
 };
